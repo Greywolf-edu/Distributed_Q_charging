@@ -42,7 +42,7 @@ class Network:
     def partition(self, func=network_partition):
         self.charging_pos = func(self)
         for mc in self.mc_list:
-            mc.optimzer.update_charging_pos(self.charging_pos)
+            mc.optimizer.update_charging_pos(self.charging_pos)
         self.active = True
 
     def communicate(self, func=uniform_com_func):
